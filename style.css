@@ -1,0 +1,137 @@
+/* style.css */
+QMainWindow {
+    background-color: #2E3440;
+    color: #D8DEE9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('background.jpg');
+    background-size: contain;  
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);  
+}
+
+QLabel {
+    color: #D8DEE9;
+    font-size: 14px;
+}
+
+QLineEdit {
+    background-color: #3B4252;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 5px;
+    color: #D8DEE9;
+}
+
+QLineEdit:focus {
+    border: 1px solid #88C0D0;
+}
+
+QPushButton {
+    background-color: #4C566A;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 10px;
+    color: #D8DEE9;
+}
+
+QPushButton:hover {
+    background-color: #5E81AC;
+    border: 1px solid #5E81AC;
+}
+
+QPushButton:pressed {
+    background-color: #88C0D0;
+    border: 1px solid #88C0D0;
+}
+
+QPushButton#download_button {
+    background-color: #4C566A;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    width: 100%;
+    min-width: 150;
+}
+
+QPushButton#download_button:hover {
+    background-color: #5E81AC;
+    border: 1px solid #5E81AC;
+}
+
+QPushButton#download_button:pressed {
+    background-color: #88C0D0;
+    border: 1px solid #88C0D0;
+}
+
+QLabel#status_label {
+    color: #D8DEE9;
+    font-size: 16px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+QComboBox {
+    background-color: #3B4252;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 5px;
+    color: #D8DEE9;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #3B4252;
+    border: 1px solid #4C566A;
+    color: #D8DEE9;
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: #5E81AC;
+}
+
+QProgressBar {
+    border: 2px solid #4C566A;
+    border-radius: 5px;
+    text-align: center;
+    color: #D8DEE9;
+    background-color: #3B4252;
+    position: relative; 
+}
+
+QProgressBar::chunk {
+    background-color: #5E81AC;
+    width: 20px;
+}
+
+QProgressBar::chunk:completed {
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+}
+
+QProgressBar::chunk:completed::after {
+    content: '✔';
+    color: #A3BE8C;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+QProgressBar::chunk:completed:hover::after {
+    opacity: 1;
+}
+
+QProgressBar:hover {
+    border: 2px solid #88C0D0;
+    color: #88C0D0;
+}
+
+QProgressBar::chunk:hover {
+    background-color: #88C0D0;
+}
